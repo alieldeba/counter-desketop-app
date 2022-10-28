@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    /> -->
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>0</h1>
+    <div class="buttons">
+      <button class="dec">-</button>
+      <button class="inc">+</button>
+    </div>
+    <script>
+      const num = document.querySelector("h1");
+      const inc = document.querySelector(".inc");
+      const dec = document.querySelector(".dec");
+
+      let counter = 0;
+
+      inc.addEventListener("click", () => {
+        counter += 1;
+        num.innerText = counter;
+      });
+
+      dec.addEventListener("click", () => {
+        if (counter === 0) return;
+        counter -= 1;
+        num.innerText = counter;
+      });
+    </script>
+  </body>
+</html>

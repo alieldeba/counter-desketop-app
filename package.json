@@ -1,0 +1,22 @@
+{
+  "name": "counter-desketop-app",
+  "version": "1.0.0",
+  "description": "A counter desketop app using electron",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . build --overwrite"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "counter",
+    "app"
+  ],
+  "author": "alieldeba",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^21.1.1",
+    "electron-packager": "^17.0.0"
+  }
+}
